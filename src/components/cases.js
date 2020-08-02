@@ -5,19 +5,19 @@ import { ReactComponent as CasesPrev } from "../assets/arrow-left.svg";
 const caseStudies = [
   {
     id: 1,
-    subtitle: "Curology",
+    subtitle: "Product Design",
     title: "A custom formula for your skin’s unique needs",
     img: "curology-min"
   },
   {
     id: 2,
-    subtitle: "Yourspace",
+    subtitle: "Poster Design",
     title: "Open space floor plans for you next venture",
     img: "yourspace-min"
   },
   {
     id: 3,
-    subtitle: "Lumin",
+    subtitle: "Web Design",
     title: "For your best look ever",
     img: "lumin-min"
   }

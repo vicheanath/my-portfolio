@@ -8,10 +8,10 @@ const Banner = () => {
         <div className='row'>
           <h2>
             <div className='line'>
-              <span>Creating unique brands is</span>
+              <span>Web Developer</span>
             </div>
             <div className='line'>
-              <span>what we do.</span>
+              <span>Graphic Designer.</span>
             </div>
           </h2>
           <div className='btn-row'>
