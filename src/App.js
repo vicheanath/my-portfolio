@@ -10,13 +10,15 @@ import Approach from "./pages/approach";
 import Services from "./pages/services";
 import About from "./pages/about";
 import Home from "./pages/home";
+import Project from "./pages/project";
 
 const routes = [
   { path: "/", name: "Home", Component: Home },
   { path: "/case-studies", name: "caseStudies", Component: CaseStudies },
   { path: "/approach", name: "approach", Component: Approach },
   { path: "/services", name: "services", Component: Services },
-  { path: "/about-us", name: "about", Component: About }
+  { path: "/about-us", name: "about", Component: About },
+  { path: "/project/:id", name: "project", Component: Project }
 ];
 
 function debounce(fn, ms) {
