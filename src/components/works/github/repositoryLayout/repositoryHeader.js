@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 import GitHubButton from "react-github-btn"
-import {RepoHead, Title} from "../../../styled/repository"
+import { RepoHead, Title } from "../../../styled/repository"
 
 export const RepositoryHeader = ({ repo }) => {
   return (
@@ -16,7 +16,7 @@ export const RepositoryHeader = ({ repo }) => {
       </Title>
       <GitHubButton
         href={`https://github.com${repo.resourcePath}`}
-        data-icon='Star'
+        data-icon="Star"
         data-size="large"
         aria-label="Star repo on GitHub"
       >

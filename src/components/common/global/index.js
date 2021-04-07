@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import variables from "../../../data/variables";
-import './fonts.css';
+import { createGlobalStyle } from "styled-components"
+import variables from "../../../data/variables"
+import "./fonts.css"
 
 export const GlobalStyle = createGlobalStyle`
   // normalize
@@ -16,7 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-text-size-adjust: 100%; /* 2 */
     body {
       font-size: 14px;
-      font-family: 'GT-Walsheim-Pro-Regular';
+      /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
+      font-family: 'Hanuman-Regular', 'Hanuman-Regular',sans-serif;
       margin: 0;
     }
     main {
@@ -38,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     b,
     strong {
       font-weight: bolder;
-      font-family: 'GT-Walsheim-Pro-Bold';
+      font-family: 'GT-Walsheim-Pro-Bold', 'Hanuman-Bold';
     }
     small {
       font-size: 80%;

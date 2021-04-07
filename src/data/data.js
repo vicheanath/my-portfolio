@@ -1,10 +1,10 @@
 module.exports = {
-  SiteTitle: 'Abdelali',
-  Sitelogo: '#',
-  SiteLogoText: 'Abdelali',
-  SiteAuthor: 'Abdelali Dahir',
-  SiteDescription: 'Front End Developer',
-  defaultDescription: 'Software engineer!', 
+  SiteTitle: "Vichea",
+  Sitelogo: "#",
+  SiteLogoText: "Vichea Nath",
+  SiteAuthor: "Vichea Nath",
+  SiteDescription: "UX/UI Designer & Web Developer",
+  defaultDescription: "Software engineer!",
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name
@@ -40,21 +40,21 @@ module.exports = {
   }`,
   githubApiVariables: {
     number_of_repos: 12,
-  }, 
+  },
   SiteSocialLinks: {
-    twitter: 'https://twitter.com/AbdaliDahir',
-    github: 'https://github.com/AbdaliDahir',
-    linkedin: 'https://www.linkedin.com/in/abdelali-dahir-0b5344111/',
+    twitter: "",
+    github: "https://github.com/vicheanath",
+    linkedin: "https://www.linkedin.com/in/vicheanath",
   },
   SiteAddress: {
-    city: 'Casablanca',
-    region: 'CurvaSud',
-    country: 'Morocco',
-    zipCode: 'ZipCode',
+    city: "Phnom Phenh",
+    region: "Khmer",
+    country: "Cambodia",
+    zipCode: "1200",
   },
   SiteContact: {
-    email: 'abdali.dahir@gmail.com',
-    phone: 'phone number',
+    email: "nathvichea1@gmail.com",
+    phone: "+(855)96 63 33 109",
   },
-  SiteCopyright: '2020',
-};
+  SiteCopyright: "2021",
+}

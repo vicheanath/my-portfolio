@@ -1,7 +1,11 @@
-import React from "react" 
-import {RepoContent} from "../../styled/repository"
+import React from "react"
+import { RepoContent } from "../../styled/repository"
 
-import {RepositoryHeader, RepositoryFooter, RepositoryDescription} from './repositoryLayout/index'
+import {
+  RepositoryHeader,
+  RepositoryFooter,
+  RepositoryDescription,
+} from "./repositoryLayout/index"
 
 const Repository = ({ repo }) => {
   return (

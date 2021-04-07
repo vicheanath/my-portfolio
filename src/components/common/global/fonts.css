@@ -10,3 +10,12 @@
   font-family: 'GT-Walsheim-Pro-Bold';
   src: url('../../../assets/fonts/GT-Walsheim-Pro-Bold.woff2') format('woff2'); /* Super Modern Browsers */
 }
+
+@font-face {
+  font-family: 'Hanuman-Bold';
+  src: url('./../../../assets/fonts/Hanuman-Bold.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Hanuman-Regular';
+  src: url('./../../../assets/fonts/Hanuman-Regular.ttf') format('ttf');
+}

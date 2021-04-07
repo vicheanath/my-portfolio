@@ -31,10 +31,12 @@ creative personal & portfolio template based on gatsby. designed so you can show
     ```
 
     Set up environment.
+
     ```shell
     cp .env.example .env.development
     vi .env.development
     ```
+
     Open the file `.env.development` and paste your personal GitHub access token in it.
     At least with repository and user read access. The file should then look like the following
 
@@ -45,6 +47,7 @@ creative personal & portfolio template based on gatsby. designed so you can show
     ```
 
     Start development server
+
     ```shell
     gatsby develop
     ```
@@ -54,7 +57,6 @@ creative personal & portfolio template based on gatsby. designed so you can show
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-
 
 ## 🧐 What's inside?
 
@@ -99,7 +101,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-
 ## 🛠 Features
 
 - [Gatsby v2](https://www.gatsbyjs.org/)
@@ -111,7 +112,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 - fetching data from the official GitHub [gatsby-source-github-api](https://github.com/ldd/gatsby-source-github-api)
 - Google Analytics integration
 - Easy site customization
-  
+
 ## 🎓 Learning Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:

@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react"
 import { Star, Key } from "react-feather"
-import {FooterItem, Circle} from "../../../styled/repository"
+import { FooterItem, Circle } from "../../../styled/repository"
 
 export const RepositoryFooter = ({ repo }) => {
-
-  const language = repo.languages.edges[0];
+  const language = repo.languages.edges[0]
   const timeAgo = new Date(repo.updatedA) - new Date()
   const daysAgo = Math.floor(timeAgo / (1000 * 60 * 60 * 24)) // ms to days
   let updatedAt = repo.updatedAt.slice(0, 10)
@@ -20,18 +19,18 @@ export const RepositoryFooter = ({ repo }) => {
       <FooterItem>
         <Circle
           style={{
-            backgroundColor: language ? language.node.color : '#000'
+            backgroundColor: language ? language.node.color : "#000",
           }}
         />{" "}
-        {language ? language.node.name : 'undifined'}
+        {language ? language.node.name : "undifined"}
       </FooterItem>
       <FooterItem>
         <Star className="star" />
-        <span> {repo.stargazers.totalCount}{" "} </span>
+        <span> {repo.stargazers.totalCount} </span>
       </FooterItem>
       {repo.licenseInfo && (
         <FooterItem>
-          <Key /> 
+          <Key />
           <span> {repo.licenseInfo.name} </span>
         </FooterItem>
       )}
@@ -40,4 +39,3 @@ export const RepositoryFooter = ({ repo }) => {
     </div>
   )
 }
-

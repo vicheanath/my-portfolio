@@ -1,15 +1,14 @@
 ---
 title: League of Legends
-tags: ['Adobe xd', 'css', 'js', 'dashboard']
+tags: ["Adobe xd", "css", "js", "dashboard"]
 category: mobile-ui
-image: './salty_egg.jpg'
+image: "./salty_egg.jpg"
 date: "2015-05-01T22:12:03.284Z"
 description: "League of Legends is a multiplayer online battle arena video game developed and published by Riot Games for Microsoft Windows and macOS. Inspired by Defense of the Ancients, the game follows a freemium model. The game was released on October 27, 2009"
 ---
 
+## Choose Your Champion
 
-Choose Your Champion
---------------------------
 Whether you like to dive straight into the fray, support your teammates, or something in between, there’s a spot for you on the Rift.
 
 Assassin
@@ -40,4 +39,3 @@ Oh, and here's a great quote from this Wikipedia on
 > wrapped in plastic, and vacuum packed. From the salt curing process, the
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
-
