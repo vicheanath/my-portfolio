@@ -1,0 +1,43 @@
+.cursor {
+		pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+		&__circle {
+			position: fixed;
+			top: 0;
+			left: 0;
+			mix-blend-mode: difference;
+			z-index: 10;
+			transform: translateX(-50%) translateY(-50%);
+			&--big {
+				stroke: #000;
+				fill: transparent;
+				mix-blend-mode: difference;
+				transform: translateX(-50%) translateY(-50%);
+                #bigCircle{
+                    transition: all 0.2s ease-in-out;
+                }
+			}
+			&--small {
+				fill: #000;
+				mix-blend-mode: difference;
+				transform: translateX(-50%) translateY(-50%);
+			}
+		}
+
+		&__plus {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			stroke: transparent;
+			fill: transparent;
+			mix-blend-mode: normal;
+			transform: translateX(-50%) translateY(-50%);
+			&--area {
+				stroke: transparent;
+			}
+		}
+	}

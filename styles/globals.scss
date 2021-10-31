@@ -1,115 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+@font-face {
+  font-family: "TT Hoves";
+  src: url("/fonts/TTHoves-Regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Hoves";
+  src: url("/fonts/TTHoves-Medium.woff2");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
 :root {
-    --primary: #fba754;
-    --pink: #ef3c66;
-    --off-white: #f7f8fb;
-    --white: #fff;
-    --black: #111;
-    --dark-gray: #555;
-    --border: #ddd;
-    --main-font: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-    --bold-font: 500;
-    --body: 2rem;
-    --h1: 12rem;
-    --h2: 7.2rem;
-    --h3: 3.6rem;
-    --h4: 2.4rem;
-    --ico-dimension: 8rem;
-    --gap-12: 12rem;
-    --gap-6: 6rem;
-    --gap-4: 4rem;
-    --gap-3: 3rem;
-    --nav-height: 10rem;
-    --loading-scale: 25;
+  --primary: #fba754;
+  --pink: #ef3c66;
+  --off-white: #f7f8fb;
+  --white: #fff;
+  --black: #111;
+  --dark-gray: #555;
+  --border: #ddd;
+  --main-font: "TT Hoves",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  --bold-font: 500;
+  --body: 2rem;
+  --h1: 10rem;
+  --h2: 7.2rem;
+  --h3: 3.6rem;
+  --h4: 2.4rem;
+  --ico-dimension: 8rem;
+  --gap-12: 12rem;
+  --gap-6: 6rem;
+  --gap-4: 4rem;
+  --gap-3: 3rem;
+  --nav-height: 10rem;
+  --loading-scale: 25;
 }
 
+@import "./normalize.scss";
+@import "./header.scss";
+@import "./main.scss";
 
-
-
-body{
-    cursor: none;
-	font-family: var(--main-font);
+body {
+  font-family: var(--main-font);
+  margin: 0;
+  cursor: none;
+  width: 100%;
+  height: 100%;
+  background-color: var(--off-white);
 }
 #__next {
-	width: 100%;
-	height: 100%;
-	cursor: none;
-	margin: 0;
-    position: relative;
-	.cursor {
-		pointer-events: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(-50%, -50%);
-		&__circle {
-			position: fixed;
-			top: 0;
-			left: 0;
-			mix-blend-mode: difference;
-			z-index: 10;
-			transform: translateX(-50%) translateY(-50%);
-			&--big {
-				stroke: #000;
-				fill: transparent;
-				mix-blend-mode: difference;
-				transform: translateX(-50%) translateY(-50%);
-                transition: all 0.05s ease-in-out;
-			}
-			&--small {
-				fill: #000;
-				mix-blend-mode: difference;
-				transform: translateX(-50%) translateY(-50%);
-			}
-		}
-
-		&__plus {
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 100;
-			stroke: transparent;
-			fill: transparent;
-			mix-blend-mode: normal;
-			transform: translateX(-50%) translateY(-50%);
-			&--area {
-				stroke: transparent;
-			}
-		}
-	}
-
-	.container {
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background: #fff;
-		a {
-			border-bottom: 2px solid #000;
-		}
-
-		h1,
-		p,
-		a,
-		img {
-			color: #000;
-		}
-	}
-
-
-    .loading{
-        position: absolute;
-        top: 50vh;
-        left: 50vw;
-        transform: translate(-50%, -50%);
-        width: 50px;
-        height: 50px;
-        background: rgb(36, 30, 30);
-        border-radius: 50%;
-        z-index: 100;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    a {
+      border-bottom: 2px solid #000;
     }
+
+    h1,
+    p,
+    a,
+    img {
+      color: #000;
+    }
+  }
+
+  .loading {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgb(36, 30, 30);
+    border-radius: 50%;
+    z-index: 100;
+  }
 }
+.wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+}
+
+@import "./cursor.scss";

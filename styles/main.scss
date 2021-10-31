@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  &__txt-wrap {
+    .wrap-hidden {
+      overflow: hidden;
+      display: inline-block;
+    }
+    .name {
+      font-weight: var(--bold-font);
+      font-size: var(--h4);
+      margin: var(--gap-3) 0;
+      overflow: hidden;
+    }
+    h1 {
+      font-weight: var(--bold-font);
+      font-size: var(--h2);
+      margin: var(--gap-3) 0;
+      overflow: hidden;
+      margin: 0;
+    }
+    .ux-ui{
+        margin-left: 400px;
+    }
+  }
+}

@@ -1,41 +1,114 @@
-import React, { Fragment } from 'react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState, Fragment, MutableRefObject } from 'react'
 import { useRouter } from 'next/router'
 import { gsap, TweenMax } from 'gsap'
 import { useMousePosition } from '../libs/useMousePosition'
+import { isServer } from '../libs/isServer'
+import Link from 'next/link'
 const Navbar = () => {
-    const router = useRouter()
-    const [loading, setLoading] = React.useState<boolean>(false)
-    let loadingRef = useRef<HTMLElement | null>(null)
-
-
+    let router = useRouter()
+    let loadingRef: MutableRefObject<HTMLElement | null> = useRef(null)
     let bigCircle = useRef<HTMLDivElement | null>(null)
     let smallCircle = useRef<HTMLDivElement | null>(null)
     let smallPlus = useRef<HTMLDivElement | null>(null)
-
+    let smallPlusArea = useRef<HTMLDivElement | null>(null)
     const { x, y } = useMousePosition()
 
+    // Hover an element
+    const onMouseHover = () => {
+        gsap.to('#bigCircle', {
+            attr: {
+                r: 25,
+            }
+        })
+    }
+    const onMouseHoverOut = () => {
+        gsap.to('#bigCircle', {
+            attr: {
+                r: 18
+            }
+        })
+    }
+
+    // Hover img an element
+    const onMouseHoverArea = () => {
+        gsap.to(bigCircle, .3, {
+            fill: '#212121',
+            mixBlendMode: 'normal'
+        })
+        gsap.to(smallCircle, .3, {
+            fill: 'transparent'
+        })
+        gsap.to(smallPlusArea, 0.3, {
+            stroke: '#DEDEDE'
+        })
+    }
+    const onMouseHoverAreaOut = () => {
+        gsap.to(bigCircle, 0.3, {
+            fill: 'transparent',
+            mixBlendMode: 'difference'
+        })
+        gsap.to(smallCircle, 0.3, {
+            fill: '#DEDEDE'
+        })
+        gsap.to(smallPlusArea, 0.3, {
+            stroke: 'transparent'
+        })
+    }
+
     useEffect(() => {
-        TweenMax.to(bigCircle, .4, {
-            x: x,
-            y: y
+        const hoverable: NodeListOf<Element> = document.querySelectorAll('.hoverable')
+        const hoverablesArea: NodeListOf<Element> = document.querySelectorAll('.hoverableArea');
+        hoverable.forEach(item => {
+            item.addEventListener('mouseenter', onMouseHover);
+            item.addEventListener('mouseleave', onMouseHoverOut)
         })
-        TweenMax.to(smallCircle, .1, {
-            x: x,
-            y: y
-        })
-        TweenMax.to(smallPlus, .1, {
-            x: x,
-            y: y
+        hoverablesArea.forEach(item => {
+            item.addEventListener('mouseenter', onMouseHoverArea);
+            item.addEventListener('mouseleave', onMouseHoverAreaOut)
         })
 
-
+        gsap.to(bigCircle, .4, {
+            x: x,
+            y: y
+        })
+        gsap.to(smallCircle, .1, {
+            x: x,
+            y: y
+        })
+        gsap.to(smallPlus, .1, {
+            x: x,
+            y: y
+        })
     }, [x, y])
+ 
     return (
         <Fragment>
-            <div className="header">
-                This is header
-            </div>
+            <header className="header wrapper">
+                <div className="header__logo">
+                    <Link href="/">
+                        <a className="link">Home</a>
+                    </Link>
+                </div>
+                <div className="header__nav">
+                    <ul className="header__nav-list">
+                        <li className="header__nav-item">
+                            <Link href="/aboutme">
+                                <a className="hoverable">About Me</a>
+                            </Link>
+                        </li>
+                        <li className="header__nav-item">
+                            <Link href="/playground">
+                                <a className="hoverable">Playground</a>
+                            </Link>
+                        </li>
+                        <li className="header__nav-item">
+                            <Link href="/playground">
+                                <a className="hoverable">Connect</a>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </header>
             <div className="cursor" >
                 <div className="cursor__circle cursor__circle--big " ref={el => bigCircle = el}>
                     <svg height="60" width="60">
@@ -52,6 +125,7 @@ const Navbar = () => {
                 <div className="cursor__plus" ref={el => smallPlus = el}>
                     <svg
                         className="cursor__plus--area"
+                        ref={el => smallPlusArea = el}
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -65,9 +139,7 @@ const Navbar = () => {
                     </svg>
                 </div>
             </div>
-            {/* <div ref={el => loadingRef = el} className="loading"></div> */}
         </Fragment>
-
     )
 }
 export default Navbar
