@@ -1,10 +1,19 @@
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
+  .profile {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+  }
   &__txt-wrap {
+    position: absolute;
+    background: transparent;
     .wrap-hidden {
       overflow: hidden;
       display: inline-block;
+      color: var(--white);
     }
     .name {
       font-weight: var(--bold-font);
@@ -19,8 +28,8 @@
       overflow: hidden;
       margin: 0;
     }
-    .ux-ui{
-        margin-left: 400px;
+    .ux-ui {
+      margin-left: 400px;
     }
   }
 }

@@ -4,6 +4,7 @@
         top: 0;
         left: 0;
         transform: translate(-50%, -50%);
+		z-index: 99999;
 		&__circle {
 			position: fixed;
 			top: 0;
